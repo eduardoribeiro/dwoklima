@@ -7,7 +7,8 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink
+  NavLink,
+  Button
 } from 'reactstrap';
 
 const Header = () => {
@@ -48,6 +49,7 @@ const Header = () => {
                 <NavLink href="#about">About</NavLink>
               </NavItem>
             </Nav>
+            <Button color="warning">Agendar agora</Button>{' '}
           </Collapse>
         </Container>
       </Navbar>
