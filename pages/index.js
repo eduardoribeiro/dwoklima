@@ -1,7 +1,7 @@
 import Layout from "../components/Layout";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
-import Feature from "../components/Features";
+import Brands from "../components/Brands";
 import Service from "../components/Service";
 import About from "../components/About";
 import Footer from "../components/Footer";
@@ -11,8 +11,8 @@ const Index = () => {
     <Layout pageTitle="Landing Page Nextjs">
       <Header />
       <Hero />
-      <Feature/>
       <Service />
+      <Brands />
       <About />
       <Footer />
     </Layout>
