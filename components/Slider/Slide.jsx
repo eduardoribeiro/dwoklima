@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-import { css, jsx } from '@emotion/react'
+import { css, jsx } from '@emotion/react';
 
 const Slide = ({ content, width }) => {
   return (
@@ -7,7 +7,7 @@ const Slide = ({ content, width }) => {
       css={css`
         height: 100%;
         width: ${width}px;
-        background-image: url('${content}');
+        background-image: url('images/${content}');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;

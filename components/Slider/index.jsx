@@ -1,23 +1,25 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { css, jsx } from "@emotion/react";
 import SliderContent from "./SliderContent";
 import Slide from "./Slide";
+import Content from './Content';
+import useWindowSize from "../../hooks/useWindowSize";
+import Arrow from "./Arrows";
+import Dots from "./Dots";
 
-const getWidth = () => window.innerWidth;
-
-/**
- * @function Slider
- */
 const Slider = (props) => {
+  const { width } = useWindowSize();
   const { slides } = props;
 
   const firstSlide = slides[0];
   const secondSlide = slides[1];
   const lastSlide = slides[slides.length - 1];
 
+  console.log(lastSlide, firstSlide, secondSlide);
+
   const [state, setState] = useState({
     activeSlide: 0,
-    translate: getWidth(),
+    translate: width,
     transition: 0.45,
     transitioning: false,
     _slides: [lastSlide, firstSlide, secondSlide],
@@ -97,7 +99,7 @@ const Slider = (props) => {
   };
 
   const handleResize = () => {
-    setState({ ...state, translate: getWidth(), transition: 0 });
+    setState({ ...state, translate: getWidth.width, transition: 0 });
   };
 
   const nextSlide = () => {
@@ -105,7 +107,7 @@ const Slider = (props) => {
 
     setState({
       ...state,
-      translate: translate + getWidth(),
+      translate: translate + getWidth.width,
       activeSlide: activeSlide === slides.length - 1 ? 0 : activeSlide + 1,
     });
   };
@@ -121,6 +123,7 @@ const Slider = (props) => {
   };
 
   const smoothTransition = () => {
+    const { width } = useWindowSize();
     let _slides = [];
 
     // We're at the last slide.
@@ -135,24 +138,28 @@ const Slider = (props) => {
       ...state,
       _slides,
       transition: 0,
-      translate: getWidth(),
+      translate: width,
     });
   };
-
   return (
     <div css={SliderCSS} ref={sliderRef}>
       <SliderContent
         translate={translate}
         transition={transition}
-        width={getWidth() * _slides.length}
+        width={width * _slides.length}
       >
-        {_slides.map((_slide) => (
-          <>
-            <Slide width={getWidth()} key={_slide.id} content={_slide.image} />
+        {_slides.map((_slide, i) => (
+          <section key={_slide.id + i} css={css`width: 100%`}>
+            <Slide width={width} content={_slide.image} />
             <Content service={_slide.service} />
-          </>
-        ))}
+          </section>
+          )
+        )}
       </SliderContent>
+      <Arrow direction="left" handleClick={prevSlide} />
+      <Arrow direction="right" handleClick={nextSlide} />
+
+      <Dots slides={slides} activeSlide={activeSlide} />
     </div>
   );
 };

@@ -2,9 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import data from "../data/site_data.json";
 import Slider from "./Slider";
 
-const Hero = () => (
-  <section className="section position-relative hero-container">
-    <Slider slides={data.slides} autoPlay />
-  </section>
-);
+const Hero = () => <Slider slides={data.slides} aautoPlay={2} />;
+
 export default Hero;

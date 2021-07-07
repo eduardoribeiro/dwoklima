@@ -1,17 +1,25 @@
 import React from "react";
+import { css, jsx } from "@emotion/react";
 import { Jumbotron, Container, Row, Col } from "reactstrap";
 
-export const Content = ({ service }) => (
-  <Jumbotron fluid>
+const Content = ({ service }) => (
+  <Jumbotron
+    fluid
+    css={css`
+      position: relative;
+      bottom: 40vh;
+      width: 100%;
+    `}
+  >
     <Container>
       <Row className="align-items-center">
         <Col
-          lg={5}
-          style={{
-            background: "rgba(255,255,255, 0.75)",
-            borderRadius: "5px",
-            padding: "12px",
-          }}
+          lg={7}
+          css={css`
+            background: rgba(255,255,255, 0.75);
+            border-radius: 5px;
+            padding: 12px;
+          `}
         >
           <div className="pr-lg-5">
             <p className="text-uppercase text-primary font-weight-medium f-14 mb-4">
@@ -19,11 +27,7 @@ export const Content = ({ service }) => (
             </p>
             <h1 className="mb-4 font-weight-normal line-height-1_4">
               Instalação, manutenção e reparação de{" "}
-              <p
-                className="text-primary font-weight-medium"
-              >
-                {service}
-              </p>
+              <p className="text-primary font-weight-medium">{service}</p>
             </h1>
 
             <a href="#" className="btn btn-warning">
@@ -35,3 +39,5 @@ export const Content = ({ service }) => (
     </Container>
   </Jumbotron>
 );
+
+export default Content;
