@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { css, jsx } from "@emotion/react";
 
-const Styles = css`
-  .slider {
+const SliderContainer = css`
     position: relative;
     height: 80vh;
-  }
+`;
 
-  .slide {
+const SlideItem = css`
     position: absolute;
     top: 0;
     left: 0;
@@ -18,20 +17,13 @@ const Styles = css`
     align-items: center;
     opacity: 0;
     transition: 0.3s ease;
-  }
-
-  .slide h1,
-  .slide h2 {
-    color: #fff;
-    text-shadow: 2px 2px 1px #000;
-  }
-
-  .slide.active {
-    opacity: 1;
+    &.active {
+        opacity: 1;
     transition-duration: 0.2s;
-  }
+    }
+    `;
 
-  .image {
+const SliderImage = css`
     position: absolute;
     top: 0;
     left: 0;
@@ -39,10 +31,9 @@ const Styles = css`
     height: 100%;
     object-fit: cover;
     z-index: -1;
-  }
 `;
 
-const Slider = ({ slides }) => {
+const BasicSlider = ({ slides }) => {
   // Create a curr state indicating what's the current slide's index
   const [curr, setCurr] = useState(0);
   const { length } = slides;
@@ -87,15 +78,15 @@ const Slider = ({ slides }) => {
     */
 
   return (
-    <section className="slider">
+      <section className={SliderContainer}>
       {slides.map((s, i) => (
         <section
           key={s.service + s.id + i}
-          className={i === curr ? "slide active" : "slide"}
+          className={i === curr ? `${SlideItem} active`: SlideItem}
         >
           <Content service={s.service} />
           {i === curr && (
-            <img className="image" src={s.image} alt={`Image for ${s.service}`} />
+            <img className={SliderImage} src={s.image} alt={`Image for ${s.service}`} />
           )}
         </section>
       ))}
@@ -103,4 +94,4 @@ const Slider = ({ slides }) => {
   );
 };
 
-export default Slider;
+export default BasicSlider;
