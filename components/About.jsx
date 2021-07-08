@@ -7,14 +7,14 @@ const About = () => {
             <Row className="justify-content-center">
             <Col lg={6} md={8}>
                 <div className="title text-center mb-5">
-                <h3 className="font-weight-normal text-dark">About <span className="text-warning">Us</span></h3>
-                <p className="text-muted">Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type</p>
+                <h3 className="font-weight-normal text-dark">A <span className="text-warning">DwoKlima</span></h3>
+                <p className="text-muted">Com vários anos de experiência, somos a empresa indicada para resolver os seus problemas com os seus equipamentos</p>
                 </div>
             </Col>
             </Row>
             <Row>
             <Col md={4}>
-                <h2 className="font-weight-light line-height-1_6 text-dark mb-4">Lorem Ipsum has been the industry standard dummy text</h2>
+                <h2 className="font-weight-light line-height-1_6 text-dark mb-4">Trabalhamos para o satisfazer e o ajudar da melhor forma</h2>
             </Col>
             <Col md={{ size:7, offset :1 }}>
                 <Row>
