@@ -39,5 +39,68 @@
             "service": "Esquentadores",
             "image": "gas-boiler.jpeg"
         }
+    ],
+    "services": [
+        {
+            "title": "Ar Condicionados",
+            "desc": "",
+            "icon": "air-conditioned"
+        },
+        {
+            "title": "Caldeiras",
+            "desc": "",
+            "icon": "boiler"
+        },
+        {
+            "title": "Esquentadores",
+            "desc": "",
+            "icon": "gas-boiler"
+        },
+        {
+            "title": "Frigoríficos",
+            "desc": "",
+            "icon": "fridge"
+        },
+        {
+            "title": "Frio Industrial",
+            "desc": "",
+            "icon": "industrial"
+        },
+        {
+            "title": "Bombas de Calor",
+            "desc": "",
+            "icon": "electric-boiler"
+        },
+        {
+            "title": "Aquecimento Central",
+            "desc": "",
+            "icon": "radiator"
+        },
+        {
+            "title": "Energia Solar",
+            "desc": "",
+            "icon": "solar"
+        },
+        {
+            "title": "Ventilação",
+            "desc": "",
+            "icon": "vents"
+        }
+    ],
+    "brands": [
+        "carrier",
+        "daihatsu",
+        "daikin",
+        "fujitsu",
+        "general",
+        "haier",
+        "hitachi",
+        "lg",
+        "midea",
+        "mitsubishi",
+        "panasonic",
+        "samsung",
+        "sanyo",
+        "sharp"
     ]
 }

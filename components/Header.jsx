@@ -21,9 +21,9 @@ const Header = () => {
   });
 
   const handleScroll = () => {
-    if (window.scrollY > 90) {
+    if (window.scrollY > 94) {
       setSticky(true);
-    } else if (window.scrollY < 90) {
+    } else if (window.scrollY < 94) {
       setSticky(false);
     }
   };
@@ -42,13 +42,13 @@ const Header = () => {
                 <NavLink href="/#">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#feature">Features</NavLink>
+                <NavLink href="#service">Serviços</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#service">Services</NavLink>
+                <NavLink href="#brands">Marcas</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#about">About</NavLink>
+                <NavLink href="#about">Sobre nós</NavLink>
               </NavItem>
             </Nav>
             <Button color="warning">Agendar agora</Button>{" "}
