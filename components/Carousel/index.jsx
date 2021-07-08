@@ -24,7 +24,7 @@ const Carousel = ({ slides, delay = 5000, fullscreen }) => {
     return () => {
       resetTimeout();
     };
-  }, [index]);
+  }, [delay, index, slides.length]);
 
   return (
     <div className="carousel">
