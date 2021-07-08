@@ -30,7 +30,7 @@ const Content = ({ service }) => (
               <p className="text-primary font-weight-medium">{service}</p>
             </h2>
 
-            <a href="#" className="btn btn-warning">
+            <a href="#about" className="btn btn-warning">
               Ligue já <span className="ml-2 right-icon">&#8594;</span>
             </a>
           </div>

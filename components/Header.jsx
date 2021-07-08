@@ -52,7 +52,7 @@ const Header = () => {
                 <NavLink href="#about">Sobre nós</NavLink>
               </NavItem>
             </Nav>
-            <Button color="warning">Agendar agora</Button>{" "}
+            <Button color="warning" href="#about">Agendar agora</Button>{" "}
           </Collapse>
         </Container>
       </Navbar>
