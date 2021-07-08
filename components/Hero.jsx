@@ -1,8 +1,7 @@
 import React from "react";
-import { css, jsx } from "@emotion/react";
-import { slides } from "../data/site_data.json";
+import data from "../data/site_data.json";
 import Carousel from "./Carousel";
 
-const Hero = () => <Carousel slides={slides} fullscreen />;
+const Hero = () => <Carousel slides={data.slides} fullscreen />;
 
 export default Hero;

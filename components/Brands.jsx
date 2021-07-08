@@ -2,33 +2,12 @@ import React from "react";
 import { css, jsx } from "@emotion/react";
 import { Container, Row, Col } from "reactstrap";
 import data from "../data/site_data.json";
-
-const Brand = ({ brand, items }) => (
-  <div
-    css={css`
-      width: calc(100% / ${items});
-      height: auto;
-      display: flex;
-      align-items: center;
-    `}
-  >
-    <img
-      src={`vectors/${brand}.svg`}
-      css={css`
-        width: 100%;
-        filter: grayscale(1);
-        transition: all .2s ease-in-out;
-        &:hover{
-          filter: grayscale(0);
-        }
-      `}
-    />
-  </div>
-);
+import SVG from "./SVG";
 
 const Marcas = () => {
   const { brands } = data;
   const items = brands.length;
+  const size = parseInt(100 / (items/2));
   return (
     <section className="section pb-5 pt-5" id="brands">
       <Container>
@@ -47,7 +26,25 @@ const Marcas = () => {
         </Row>
         <Row className="justify-content-center">
           {brands.map((brand) => (
-            <Brand brand={brand} items={items} />
+            <div
+              css={css`
+                width: calc(100% / (${items} / 2));
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              `}
+              key={brand.name}
+            >
+              <SVG
+                name={brand.name}
+                paths={brand.paths}
+                width={brand.name === 'mitsubishi' ? '50%' : '75%'}
+                height={'100%'}
+                viewport={brand.viewbox}
+                fill={"#666"}
+              />
+            </div>
           ))}
         </Row>
       </Container>

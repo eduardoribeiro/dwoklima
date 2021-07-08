@@ -1,8 +1,10 @@
 import React from "react";
 import { css, jsx } from "@emotion/react";
 import { Container, Row, Col } from "reactstrap";
-import { services } from "../data/site_data.json";
+import SVG from "./SVG";
+import data from "../data/site_data.json";
 const Service = () => {
+  const { services } = data;
   return (
     <section className="section pt-5 pb-5" id="service">
       <Container>
@@ -47,13 +49,7 @@ const Service = () => {
                   `}
                 >
                   <div className="mb-3 justify-content-center">
-                    <img
-                      src={`icons/${icon}.svg`}
-                      css={css`
-                        width: 74px;
-                        height: auto;
-                      `}
-                    />
+                    <SVG paths={icon.paths} width={'74px'} height={'74px'} viewport={icon.viewport} transform={icon.transform} />
                   </div>
                   <h5 className="text-dark font-weight-normal pt-1 mb-3">
                     {title}
