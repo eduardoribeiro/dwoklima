@@ -10,6 +10,7 @@ import {
   NavLink,
   Button,
 } from "reactstrap";
+import Image from 'next/image';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +34,7 @@ const Header = () => {
       <Navbar light expand="md">
         <Container>
           <NavbarBrand href="/#">
-            <img src="/images/logo.png" alt="DwoKlima" className="logo" />
+            <Image src="/images/logo.png" alt="DwoKlima" className="logo" />
           </NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
