@@ -24,7 +24,7 @@ const Footer = () => {
   ];
 
   return (
-    <section className="footer section">
+    <section className="footer section pb-5 pt-5">
       <Container>
         <Row>
           <Col lg={4}>
@@ -78,7 +78,7 @@ const Footer = () => {
         <Row className="mt-5">
           <Col md={12}>
             <div className="text-center text-muted">
-              <p className="mb-0 f-15">2020 © Name. Design by Name</p>
+              <p className="mb-0 f-15">2020 © ER Services</p>
             </div>
           </Col>
         </Row>
