@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from "reactstrap";
 const About = () => {
     return (
-        <section className="section bg-light" id="about">
+        <section className="section bg-light pb-5 pt-5" id="about">
         <Container>
             <Row className="justify-content-center">
             <Col lg={6} md={8}>
