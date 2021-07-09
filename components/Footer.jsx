@@ -4,12 +4,12 @@ const Footer = () => {
   const links = [
     {
       id: 1,
-      title: "Feature",
+      title: "Cidades",
       child: [
-        { title: "LOREM IPSUM", link: "/" },
-        { title: "LOREM IPSUM", link: "/" },
-        { title: "LOREM IPSUM", link: "/" },
-        { title: "LOREM IPSUM", link: "/" },
+        { title: "Lisboa", link: "/" },
+        { title: "Cascais", link: "/" },
+        { title: "Oeiras", link: "/" },
+        { title: "Sintra", link: "/" },
       ],
     },
     {
@@ -31,8 +31,16 @@ const Footer = () => {
         <Row>
           <Col lg={4}>
             <div className="mb-4">
-              <p className="text-muted mt-4 mb-2">email@email.com</p>
-              <h6 className="text-muted font-weight-normal">+99 1234-5678-9</h6>
+              <h6 className="font-weight-normal">
+                <span itemprop="telephone">
+                  <a href="tel:+351935193196">935 193 196</a>
+                </span>
+              </h6>
+              <h6 className="font-weight-normal">
+              <span itemprop="telephone">
+                  <a href="tel:+351931962186">931 962 186</a>
+                </span>
+              </h6>
             </div>
           </Col>
           <Col lg={8}>
@@ -51,10 +59,8 @@ const Footer = () => {
               ))}
 
               <Col md={4}>
-                <h6 className="text-dark mb-3">Our Address</h6>
-                <p className="text-muted f-14">
-                  1234 Lorem Ipsum dummy text, 12345
-                </p>
+                <h6 className="text-dark mb-3">Estamos em</h6>
+                <p className="text-muted f-14">Lisboa</p>
                 <h6 className="text-muted pb-2">Email: email@email.com</h6>
                 <ul className="list-unstyled footer-social-list mt-4">
                   <li className="list-inline-item">
