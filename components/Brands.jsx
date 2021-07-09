@@ -14,9 +14,9 @@ const Marcas = () => {
         <Row className="justify-content-center p-6">
           <Col lg={6} md={8}>
             <div className="title text-center mb-5">
-              <h3 className="font-weight-normal text-dark">
+              <h2 className="font-weight-normal text-dark">
                 <span className="text-warning">Marcas</span>
-              </h3>
+              </h2>
               <p className="text-muted">
                 Fornecemos assistência técnica e suporte às mais importantes
                 marcas de ar condicionados, bombas de calor, etc

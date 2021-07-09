@@ -27,14 +27,14 @@ const About = () => {
             <Row>
               <Col md={6}>
                 <h2 className="font-weight-normal">
-                  <span itemprop="telephone">
+                  <span itemProp="telephone">
                     <a href="tel:+351935193196">935 193 196</a>
                   </span>
                 </h2>
               </Col>
               <Col md={6}>
                 <h2 className="font-weight-normal">
-                  <span itemprop="telephone">
+                  <span itemProp="telephone">
                     <a href="tel:+351931962186">931 962 186</a>
                   </span>
                 </h2>
