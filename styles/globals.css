@@ -15,8 +15,14 @@ a {
   box-sizing: border-box;
 }
 
-.logo{
+.logo {
   max-height: 64px;
+}
+
+.logo-container {
+  height: 64px;
+  width: 138px;
+  position: relative;
 }
 
 .carousel {

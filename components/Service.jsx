@@ -49,7 +49,7 @@ const Service = () => {
                   `}
                 >
                   <div className="mb-3 justify-content-center">
-                    <SVG paths={icon.paths} width={'74px'} height={'74px'} viewport={icon.viewport} transform={icon.transform} />
+                    <SVG paths={icon.paths} width={'74px'} height={'74px'} viewport={icon.viewport} fill="#222" />
                   </div>
                   <h5 className="text-dark font-weight-normal pt-1 mb-3">
                     {title}

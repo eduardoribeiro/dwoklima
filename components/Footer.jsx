@@ -23,6 +23,8 @@ const Footer = () => {
     },
   ];
 
+  const currentYear = new Date().getFullYear();
+
   return (
     <section className="footer section pb-5 pt-5">
       <Container>
@@ -78,7 +80,7 @@ const Footer = () => {
         <Row className="mt-5">
           <Col md={12}>
             <div className="text-center text-muted">
-              <p className="mb-0 f-15">2020 © ER Services</p>
+              <p className="mb-0 f-15">{currentYear} © ER Services</p>
             </div>
           </Col>
         </Row>

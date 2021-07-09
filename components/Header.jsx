@@ -34,7 +34,9 @@ const Header = () => {
       <Navbar light expand="md">
         <Container>
           <NavbarBrand href="/#">
-            <Image src="/images/logo.png" alt="DwoKlima" className="logo" />
+            <div className="logo-container">
+            <Image layout="fill" src="/images/logo.png" alt="DwoKlima" className="logo" />
+            </div>
           </NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
@@ -52,7 +54,7 @@ const Header = () => {
                 <NavLink href="#about">Sobre nós</NavLink>
               </NavItem>
             </Nav>
-            <Button color="warning" href="#about">Agendar agora</Button>{" "}
+            <Button href="#about">Agendar agora</Button>{" "}
           </Collapse>
         </Container>
       </Navbar>
