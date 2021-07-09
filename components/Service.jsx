@@ -11,9 +11,9 @@ const Service = () => {
         <Row className="justify-content-center">
           <Col lg={6} md={8}>
             <div className="title text-center mb-5">
-              <h3 className="font-weight-normal text-dark">
+              <h2 className="font-weight-normal text-dark">
                 <span className="text-warning">Serviços</span>
-              </h3>
+              </h2>
               <p className="text-muted">
                 Instalação, manutenção e reparação especializada de:
               </p>

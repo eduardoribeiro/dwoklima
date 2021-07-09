@@ -7,9 +7,9 @@ const About = () => {
         <Row className="justify-content-center">
           <Col lg={6} md={8}>
             <div className="title text-center mb-5">
-              <h3 className="font-weight-normal text-dark">
+              <h2 className="font-weight-normal text-dark">
                 A <span className="text-warning">DwoKlima</span>
-              </h3>
+              </h2>
               <p className="text-muted">
                 Com vários anos de experiência, somos a empresa indicada para
                 resolver os seus problemas com os seus equipamentos

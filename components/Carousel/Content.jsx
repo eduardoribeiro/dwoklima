@@ -25,10 +25,10 @@ const Content = ({ service }) => (
             <p className="text-uppercase text-primary font-weight-medium f-14 mb-4">
               Serviço 24/7
             </p>
-            <h2 className="mb-4 font-weight-normal line-height-1_4">
+            <h1 className="mb-4 font-weight-normal line-height-1_4">
               Instalação, manutenção e reparação de{" "}
               <p className="text-primary font-weight-medium">{service}</p>
-            </h2>
+            </h1>
 
             <a href="#about" className="btn btn-warning">
               Ligue já <span className="ml-2 right-icon">&#8594;</span>
