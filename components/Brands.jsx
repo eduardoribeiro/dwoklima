@@ -7,7 +7,6 @@ import SVG from "./SVG";
 const Marcas = () => {
   const { brands } = data;
   const items = brands.length;
-  const size = parseInt(100 / (items/2));
   return (
     <section className="section pb-5 pt-5" id="brands">
       <Container>
@@ -33,6 +32,9 @@ const Marcas = () => {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                @media (max-width: 767px) {
+                  width: calc(100% / ( ${items} / 5 ));
+                }
               `}
               key={brand.name}
             >

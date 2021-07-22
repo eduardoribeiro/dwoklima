@@ -27,6 +27,7 @@ const Service = () => {
               <Col
                 key={key}
                 lg={3}
+                sm={6}
                 className="pb-5 pt-5"
                 css={css`
                   box-sizing: border-box;

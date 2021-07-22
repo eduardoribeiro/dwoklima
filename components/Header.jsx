@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import {
   Container,
   Collapse,
@@ -11,11 +11,24 @@ import {
   Button,
 } from "reactstrap";
 import Image from 'next/image';
+import PhoneNumber from './PhoneNumber';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [sticky, setSticky] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
+  const numbers = ["935 193 196", "931 962 186"];
+  const [phoneNumber, setPhoneNumber] = useState(numbers[Math.floor(Math.random() * numbers.length)]);
+
+  const shuffle = useCallback(() => {
+      const index = Math.floor(Math.random() * numbers.length);
+      setPhoneNumber(numbers[index]);
+  }, []);
+
+  useEffect(() => {
+    const intervalID = setInterval(shuffle, 5000);
+    return () => clearInterval(intervalID);
+  }, [shuffle]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -38,7 +51,7 @@ const Header = () => {
             <Image layout="fill" src="/images/logo.png" alt="DwoKlima" className="logo" />
             </div>
           </NavbarBrand>
-          <NavbarToggler onClick={toggle} />
+          {/* <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="m-auto" navbar>
               <NavItem>
@@ -52,7 +65,8 @@ const Header = () => {
               </NavItem>
             </Nav>
             <Button href="#about">Agendar agora</Button>{" "}
-          </Collapse>
+          </Collapse> */}
+          <PhoneNumber number={phoneNumber} />
         </Container>
       </Navbar>
     </div>

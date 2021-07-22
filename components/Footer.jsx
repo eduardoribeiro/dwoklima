@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-import data from '../data/site_data.json';
+import data from "../data/site_data.json";
+import Image from "next/image";
 const Footer = () => {
   const { geography } = data;
   const currentYear = new Date().getFullYear();
@@ -12,7 +13,14 @@ const Footer = () => {
           <Col lg={4}>
             <div className="mb-4">
               <h3 className="font-weight-normal">
-                <span className="text-primary">Dwo</span><span className="text-warning">Klima</span>
+                <div className="logo-container">
+                  <Image
+                    layout="fill"
+                    src="/images/logo.png"
+                    alt="DwoKlima"
+                    className="logo"
+                  />
+                </div>
               </h3>
               <p>Lisboa</p>
             </div>
@@ -21,12 +29,10 @@ const Footer = () => {
             <Row>
               {geography.map((link, key) => (
                 <Col key={key} md={4}>
-                  <h6 className="text-dark mb-3">{link.title}</h6>
+                  <h5 className="text-dark mb-3">{link.title}</h5>
                   <ul className="list-unstyled company-sub-menu">
                     {link.child.map((fLink, key) => (
-                      <li key={key}>
-                        {fLink}
-                      </li>
+                      <li key={key}>{fLink}</li>
                     ))}
                   </ul>
                 </Col>

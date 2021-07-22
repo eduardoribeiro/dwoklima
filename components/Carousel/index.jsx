@@ -37,7 +37,7 @@ const Carousel = ({ slides, delay = 5000, fullscreen }) => {
             className="slide fullscreen"
             key={slide.id}
             style={{ backgroundImage: `url(/images/${slide.image})` }}
-          ><Content service={slide.service} /></div>
+          ><Content service={slide.service} link={slide.c2a} /></div>
         ))}
       </div>
     </div>

@@ -21,12 +21,12 @@ a {
 }
 
 .logo {
-  max-height: 64px;
+  max-height: 48px;
 }
 
 .logo-container {
-  height: 64px;
-  width: 138px;
+  height: 48px;
+  width: 218px;
   position: relative;
 }
 

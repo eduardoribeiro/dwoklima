@@ -3,41 +3,69 @@
         {
             "id": 1,
             "service": "Ar Condicionados",
-            "image": "ac.jpg"
+            "image": "ac.jpg",
+            "c2a": {
+                "link": "tel: +351935193196",
+                "text": "935 193 196"
+            }
         },
         {
             "id": 2,
             "service": "Frigorificos",
-            "image": "frigorifico.jpg"
+            "image": "frigorifico.jpg",
+            "c2a": {
+                "link": "tel: +351931962186",
+                "text": "931 962 186"
+            }
         },
         {
             "id": 3,
             "isFemale": true,
             "service": "Máquinas de Lavar",
-            "image": "washer.jpeg"
+            "image": "washer.jpeg",
+            "c2a": {
+                "link": "tel: +351935193196",
+                "text": "935 193 196"
+            }
         },
         {
             "id": 4,
             "isFemale": true,
             "service": "Máquinas da Loiça",
-            "image": "dishwasher.jpeg"
+            "image": "dishwasher.jpeg",
+            "c2a": {
+                "link": "tel: +351931962186",
+                "text": "931 962 186"
+            }
         },
         {
             "id": 5,
             "isFemale": true,
             "service": "Caldeiras",
-            "image": "hotboiler.jpeg"
+            "image": "hotboiler.jpeg",
+            "c2a": {
+                "link": "tel: +351935193196",
+                "text": "935 193 196"
+            }
         },
         {
             "id": 6,
             "isFemale": true,
             "service": "Caldeiras Industriais",
-            "image": "electric-boiler.jpeg"
+            "image": "electric-boiler.jpeg",
+            "c2a": {
+                "link": "tel: +351931962186",
+                "text": "931 962 186"
+            }
         },
         {
             "id": 7,
             "service": "Esquentadores",
-            "image": "gas-boiler.jpeg"
+            "image": "gas-boiler.jpeg",
+            "c2a": {
+                "link": "tel: +351935193196",
+                "text": "935 193 196"
+            }
         }
     ],
     "services": [

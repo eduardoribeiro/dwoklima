@@ -2,7 +2,7 @@ import React from "react";
 import { css, jsx } from "@emotion/react";
 import { Jumbotron, Container, Row, Col } from "reactstrap";
 
-const Content = ({ service }) => (
+const Content = ({ service, link }) => (
   <Jumbotron
     fluid
     css={css`
@@ -15,6 +15,7 @@ const Content = ({ service }) => (
       <Row className="align-items-center">
         <Col
           lg={6}
+          sm={12}
           css={css`
             background: rgba(255,255,255, 0.75);
             border-radius: 5px;
@@ -30,8 +31,8 @@ const Content = ({ service }) => (
               <p className="text-primary font-weight-medium">{service}</p>
             </h1>
 
-            <a href="#about" className="btn btn-warning">
-              Ligue já <span className="ml-2 right-icon">&#8594;</span>
+            <a href={link.link} className="btn btn-warning">
+              Ligue já {link.text} <span className="ml-2 right-icon">&#8594;</span>
             </a>
           </div>
         </Col>
